@@ -38,6 +38,8 @@ kong-api-template
 │   ├── swagger-perstore.yaml (OAS)
 ├── plugins
 │   ├── plugin.yaml
+├── tests
+│   ├── Test scripts(js)
 ```
 
 - meta.yaml
