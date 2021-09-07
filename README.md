@@ -24,19 +24,20 @@ Insomnia limitations)
 
 - Modify pipeline_script.sh to have your admin header and point to your demo workspace
 - chmod 744 pipeline_script.sh
-- ./pipeline_script.sh
+- ./ci/pipeline_script.sh
 
 #### repository structure
 
 Recommend following directory structure for feature team - it can be converted into Git Template
 
-- kong-api-template
-  - meta
-    - meta.yaml
-  - spec
-    - OAS Spec
-  - plugins
-    - kong plugins deck yamls
+kong-api-template
+├── meta
+│   ├── meta.yaml
+├── spec
+│   ├── swagger-perstore.yaml (OAS)
+├── plugins
+│   ├── plugin.yaml
+
 
 - meta.yaml
   - This file sets the Kong state file to only work against any services tagged
