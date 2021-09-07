@@ -30,6 +30,7 @@ Insomnia limitations)
 
 Recommend following directory structure for feature team - it can be converted into Git Template
 
+```bash
 kong-api-template
 ├── meta
 │   ├── meta.yaml
@@ -37,7 +38,7 @@ kong-api-template
 │   ├── swagger-perstore.yaml (OAS)
 ├── plugins
 │   ├── plugin.yaml
-
+```
 
 - meta.yaml
   - This file sets the Kong state file to only work against any services tagged
