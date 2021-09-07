@@ -1,6 +1,6 @@
 plugins:
     - name: response-transformer-advanced
-      service: ${service_name}
+      service: Petstore
       config:
         remove:
           headers:

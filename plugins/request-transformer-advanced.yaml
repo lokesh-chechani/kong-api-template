@@ -1,6 +1,6 @@
 plugins:
   - name: request-transformer-advanced
-    service: ${service_name}
+    service: Petstore
     config:
       add:
         headers:

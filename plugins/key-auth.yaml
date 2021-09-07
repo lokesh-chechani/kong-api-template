@@ -1,6 +1,7 @@
 plugins:
 - name: key-auth
-  service: ${service_name}
+  service: Petstore
+  # route: listPets
   config:
     key_names: 
       - apikey

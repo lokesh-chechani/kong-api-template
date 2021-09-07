@@ -1,0 +1,51 @@
+openapi: 3.0.0
+protocol: https
+tags:
+  - description: Sample API
+    name: Sample Echo API
+info:
+  contact:
+    email: me@kennethreitz.org
+    responsibleDeveloper: Kenneth Reitz
+    responsibleOrganization: Kenneth Reitz
+    url: https://kennethreitz.org
+  description: >-
+    A simple service returning a UUID based on https://httpbin.org
+    Service is free - but think about giving an ice cream to the developer
+    ![Developer wants an ice cream](https://camo.githubusercontent.com/7454fb1622dd3589ddac9251455a601c6fd21800/687474703a2f2f6661726d312e737461746963666c69636b722e636f6d2f3537322f33323531343636393638335f346461663261623762635f6b5f642e6a7067) 
+  title: UUID generator based on httpbin.org
+  version: 1.0.3
+paths:
+  /uuid:
+    get:
+      responses:
+        "200":
+          description: A UUID4.
+      summary: Return a UUID4.
+      tags:
+        - Generate UUID
+  /delay/{delay}:
+    get:
+      parameters:
+        - in: path
+          name: delay
+          required: true
+          schema:
+            type: integer
+            minimum: 0
+            maximum: 10
+          description: The delay in seconds
+      responses:
+        "200":
+          description: Returns a delayed response
+      summary: Returns a delayed response (max of 10 seconds).
+      tags:
+        - Delayed Response
+      x-kong-plugin-request-validator:
+        enabled: true
+        config:
+          allowed_content_types: ["application"]    
+servers:
+  - url: https://httpbin.org/
+x-kong-plugin-prometheus:
+  enabled: true

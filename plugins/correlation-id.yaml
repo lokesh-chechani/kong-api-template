@@ -1,6 +1,6 @@
 plugins:
 - name: correlation-id
-  service: ${service_name}
+  service: Petstore
   config:
     echo_downstream: true
     generator: uuid#counter

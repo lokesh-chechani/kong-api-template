@@ -1,11 +1,11 @@
 openapi: "3.0.0"
 info:
   version: 1.0.0
-  title: Swagger Petstore
+  title: Petstore
   license:
     name: MIT
 servers:
-  - url: ${swagger_petstore_url}
+  - url: http://petstore.dp.svc.cluster.local
 paths:
   /pets:
     get:
